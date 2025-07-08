@@ -1,21 +1,23 @@
 import React, { useContext } from 'react'
 import { AppContext } from './Contextapi'
-import { MoveRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react'
 
-// import { Link } from 'react-router-dom'
+// Import images
+import BackgroundGraphic from '../assets/Walletimages/BackgroungGraphic.png'
+import FingerprintIcon from '../assets/Loginimages/fingerprint.png'
+import UAEFlag from '../assets/Loginimages/flag.png'
 
 const LoginSundukpay = () => {
+  const data = useContext(AppContext)
+  const { Login, islogin, setislogin } = data
 
-const data=useContext(AppContext)
-
-const {Login,islogin,setislogin}=data
-
- return (
+  return (
     <div className="bg-black min-h-screen flex items-center justify-center p-4 relative">
       <div className="bg-white relative w-[320px] h-[568px] overflow-hidden">
+
         {/* Background Image */}
         <img
-          src="src/assets/Walletimages/BackgroungGraphic.png"
+          src={BackgroundGraphic}
           alt="Background"
           className="absolute left-[-191px] h-[380px] w-[379px] object-cover"
         />
@@ -23,10 +25,11 @@ const {Login,islogin,setislogin}=data
         {/* Content */}
         <div className="relative z-10 p-6 h-full flex flex-col">
           {/* Header */}
-
           <div className="mb-6 mt-4">
-
-            <h1 onClick={()=>{setislogin(false)}} className="text-[28px] cursor-pointer font-bold text-gray-900 leading-tight mb-2">
+            <h1
+              onClick={() => setislogin(false)}
+              className="text-[28px] cursor-pointer font-bold text-gray-900 leading-tight mb-2"
+            >
               Log In to<br />SundukPay
             </h1>
             <p className="text-gray-500 text-sm">
@@ -36,7 +39,7 @@ const {Login,islogin,setislogin}=data
 
           {/* Phone Input */}
           <div className="flex items-center border border-gray-400 rounded-lg px-3 py-2.5 mb-4">
-            <img src="src/assets/Loginimages/flag.png" alt="UAE Flag" className="w-6 h-4 mr-2" />
+            <img src={UAEFlag} alt="UAE Flag" className="w-6 h-4 mr-2" />
             <span className="text-black text-sm font-medium mr-2">+971</span>
             <input
               type="tel"
@@ -51,7 +54,7 @@ const {Login,islogin,setislogin}=data
               onClick={() => setislogin(true)}
               className="w-full flex items-center bg-gradient-to-r from-[#c7962b] to-[#b6801c] text-white font-bold py-2.5 px-4 rounded-lg shadow-md relative"
             >
-              <img src="src/assets/Loginimages/fingerprint.png" alt="Fingerprint" className="w-6 h-6 mr-3" />
+              <img src={FingerprintIcon} alt="Fingerprint Icon" className="w-6 h-6 mr-3" />
               <span className="flex-1 text-left text-sm">Log In with UAE PASS</span>
               <MoveRight className="text-white text-xl" />
             </button>
@@ -60,7 +63,7 @@ const {Login,islogin,setislogin}=data
           {/* Sign Up Link */}
           <div className="mb-6 text-center">
             <p className="text-black text-sm">
-              Don’t have an account?{' '}
+              Don't have an account?{' '}
               <button className="text-[#c7962b] font-bold">Sign Up</button>
             </p>
           </div>
@@ -69,18 +72,20 @@ const {Login,islogin,setislogin}=data
           <div className="mt-auto">
             <button className="w-full relative bg-black text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center">
               <span>Next</span>
-              <MoveRight className="absolute right-4 text-xl"/>
+              <MoveRight className="absolute right-4 text-xl" />
             </button>
           </div>
         </div>
-        Conditional UAE PASS Card
-        <div className='absolute z-20 rounded-t-2xl top-[320px]'>
-        {islogin==true ? Login():""}
-        </div>
+
+        {/* Conditional UAE PASS Card */}
+        {islogin === true && (
+          <div className="absolute z-20 rounded-t-2xl top-[320px] w-full">
+            {Login()}
+          </div>
+        )}
       </div>
     </div>
-  );
-
+  )
 }
 
-export default LoginSundukpay
+export default LoginSundukpay

@@ -6,9 +6,9 @@ import Login from "./all component/Login"
 import Fingerprint from "./all component/Fingerprint"
 import Finger2 from "./all component/Finger2"
 import Finger3 from "./all component/Finger3"
-import Facelogin1 from "./all component/Facelogin/Facelogin"
-import Facelogin2 from "./all component/Facelogin/Facelogin2"
-import Facelogin3 from "./all component/Facelogin/Facelogin3"
+import Facelogin1 from "./all component/Facelogin"
+import Facelogin2 from "./all component/Facelogin2"
+import Facelogin3 from "./all component/Facelogin3"
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
     {/* <Home/> */}
-    <BrowserRouter>
+    <BrowserRouter basename="/React-islamic-bank/">
     <Routes>
     <Route path="/" element={<Home/>} />
     <Route path="/Wallet/" element={<Wallet/>} />
