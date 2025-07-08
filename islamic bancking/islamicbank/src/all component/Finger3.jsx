@@ -7,7 +7,6 @@ import AeroLeft from "../assets/facelogin/aeroleft.png";
 import AeroRight from "../assets/facelogin/aeroright.png";
 import Ellipse from "../assets/Fingerprint/Ellipse.png";
 import FingerprintComplete from "../assets/Fingerprint/Group 133.png";
-import SmileyFace from "../assets/facelogin/smily.png";
 
 const Finger3 = () => {
   return (

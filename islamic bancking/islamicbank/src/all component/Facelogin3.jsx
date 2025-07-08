@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 import BackgroundGraphic from '../assets/Walletimages/BackgroungGraphic.png'
 import AeroLeft from '../assets/facelogin/aeroleft.png'
 import AeroRight from '../assets/facelogin/aeroright.png'
-import CurveLine from '../assets/Fingerprint/curvline.png'
 import Smiley from '../assets/facelogin/smily.png'
+import Ellipse from "../assets/Fingerprint/Ellipse.png";
 
 const Facelogin3 = () => {
   return (
@@ -25,8 +25,8 @@ const Facelogin3 = () => {
         <div className="w-[220px] h-[256px] absolute top-[118px] left-[50px] flex flex-col items-center justify-between">
           <div className="w-[164px] h-[164px] rounded-full bg-white blur-[2px] shadow shadow-[#D4A852] flex justify-center items-center border border-[#D4A852]" />
 
-          <div className="w-[84.5px] h-[84.5px] absolute left-[110px]">
-            <img src={CurveLine} alt="Progress Curve" />
+          <div className="w-[164px] h-[164px] absolute">
+            <img src={Ellipse} alt="ellipse" />
           </div>
 
           <div className="w-[89px] h-[89px] absolute top-[40px]">
