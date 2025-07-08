@@ -43,4 +43,4 @@ setTimeout(() => {
   )
 }
 
-export default Facelogin2
+export default Facelogin2

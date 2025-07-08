@@ -27,10 +27,6 @@ function App() {
     <Route path="/facelogin/" element={<Facelogin1/>} />
     <Route path="/facelogin2/" element={<Facelogin2/>} />
     <Route path="/facelogin3/" element={<Facelogin3/>} />
-
-
-
-
     </Routes>
     </BrowserRouter>
     </>

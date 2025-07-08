@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Finger3 = () => {
   return (
@@ -7,9 +8,11 @@ const Finger3 = () => {
         <div className="absolute top-2 left-[-191px]">
         <img src="src/assets/Walletimages/BackgroungGraphic.png" alt="" />
         </div>
+        <Link to={'/fingerprint'}>
         <div className='w-[10px] h-[10px] absolute top-[23.93px] left-[24px]'>
-            <img src="assets/Faceloginimages/aeroleft.png.png" alt="" />
+            <img src="src/assets/facelogin/aeroleft.png" alt="" />
         </div>
+        </Link>
        <div className='w-[220px] h-[256px] absolute top-[118px] left-[50px] flex flex-col items-center justify-between'>
        <div className='w-[164px] h-[164px] rounded-[50%] bg-[#FFFFFF] blur-[2px] shadow shadow-[#D4A852] flex justify-center items-center border border-[#D4A852] '>
         </div> 
@@ -26,12 +29,12 @@ const Finger3 = () => {
         <img className='z-10' src="assets/Faceloginimages/smily.png.png" alt="" />
         </div>
         <div>
-        <p className='text-center text-[28px] font-bold'>Enable Face ID</p>
+        <p className='text-center text-[28px] w-[300px] font-bold'>Enable Fingerprint</p>
         <p className='text-center text-[#6A6A6A] text-[12px]'>All Set!</p>
         </div>
        </div>
          <button className='w-[272px] h-[38px] absolute top-[506px] left-[24px] rounded-[8px] border-[#FFFFFF] bg-[#000000] text-white'>Finish</button>
-         <img className='w-[10px] h-[7.07px] absolute top-[520px] left-[274px]' src="assets/Faceloginimages/aeroright.png.png" alt="" />
+         <img className='w-[10px] h-[7.07px] absolute top-[520px] left-[274px]' src="src/assets/facelogin/aeroright.png" alt="" />
       </div>
     </div>   
 
