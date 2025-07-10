@@ -104,6 +104,7 @@ const AppProvider = (props) => {
         </Link>
 
         {/* Passcode */}
+        <Link to={"/Pincode"}>
         <div className="absolute bg-white top-[260px] h-[53px] w-[272px] left-[24px]">
           <img className="absolute top-[16px] left-[10px] w-[18px] h-[20px]" src={PasscodeIcon} alt="Passcode" />
           <p className="absolute top-[7px] left-[39px] text-[12px]">Passcode</p>
@@ -112,6 +113,8 @@ const AppProvider = (props) => {
             <MdNavigateNext />
           </span>
         </div>
+      </Link>
+
       </div>
     );
   }

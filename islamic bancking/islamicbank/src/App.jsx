@@ -9,6 +9,7 @@ import Finger3 from "./all component/Finger3"
 import Facelogin1 from "./all component/Facelogin"
 import Facelogin2 from "./all component/Facelogin2"
 import Facelogin3 from "./all component/Facelogin3"
+import Pincode from "./all component/Pincode/Pincode"
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
     <Route path="/facelogin/" element={<Facelogin1/>} />
     <Route path="/facelogin2/" element={<Facelogin2/>} />
     <Route path="/facelogin3/" element={<Facelogin3/>} />
+    <Route path="/pincode" element={<Pincode/>}/>
+
     </Routes>
     </BrowserRouter>
     </>
