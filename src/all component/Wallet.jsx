@@ -11,7 +11,13 @@ const Wallet = () => {
   const { Cards, Quicklogin, isquicklogin } = data;
 
   console.log(Cards());
-
+const googlelogin = async (e) => {
+    try {
+window.location.href = 'https://5a5c096fc0a2.ngrok-free.app/api/sunduk-service/custom-login';
+    } catch (error) {
+      console.error('Error during login:', error);
+}
+};
   return (
     <div className="bg-black flex justify-center w-[100vw] h-[100vh] items-center">
       <div className="h-[568px] bg-white w-[320px] relative overflow-hidden">
@@ -45,6 +51,10 @@ const Wallet = () => {
           <p className="h-[100px] absolute top-[360px] font-bold text-[28px] left-[24px]">
             Wallet
           </p>
+          
+            <button  onClick={()=>{googlelogin()}} className="h-[38px] bg-gradient-to-r from-[#c7962b] to-[#b6801c] text-white font-bold text-[12px] rounded-[8px] absolute top-[410px] left-[24px] w-[272px]">
+              Log in with Google
+            </button>
         </div>
 
         {/* Conditional Quick Login */}
