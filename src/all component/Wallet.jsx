@@ -15,7 +15,7 @@ const googlelogin = async (e) => {
     try {
 window.location.href = 'https://5a5c096fc0a2.ngrok-free.app/api/sunduk-service/custom-login';
     } catch (error) {
-      console.error('Error during login:', error);
+      // console.error('Error during login:', error);
 }
 };
   return (
