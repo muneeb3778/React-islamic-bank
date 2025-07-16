@@ -23,7 +23,7 @@ const Finger3 = () => {
         </Link>
 
         <div className="w-[220px] h-[256px] absolute top-[118px] left-[50px] flex flex-col items-center justify-between">
-          <div className="w-[164px] h-[164px] rounded-full bg-white blur-[2px] shadow shadow-[#D4A852] flex justify-center items-center border border-[#D4A852]">
+          <div className="w-[164px] h-[164px] rounded-full bg-white blur-[2px] shadow-[0_0_25px_1px_#D4A852] flex justify-center items-center border border-[#D4A852]">
             {/* Empty circle background */}
           </div>
 
