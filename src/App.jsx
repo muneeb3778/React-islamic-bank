@@ -11,6 +11,7 @@ import Facelogin2 from "./all component/Facelogin2"
 import Facelogin3 from "./all component/Facelogin3"
 import Pincode from "./all component/Pincode/Pincode"
 import Userprofile from "./all component/Userprofile"
+import Landingpage from "./all component/Landingpage"
 
 function App() {
 
@@ -30,6 +31,8 @@ function App() {
     <Route path="/facelogin3/" element={<Facelogin3/>} />
     <Route path="/pincode" element={<Pincode/>}/>
     <Route path="/Userprofile" element={<Userprofile/>}/>
+    <Route path="/landingpage" element={<Landingpage/>}/>
+
 
     </Routes>
     </BrowserRouter>

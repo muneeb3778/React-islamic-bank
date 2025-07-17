@@ -8,12 +8,16 @@ import CardImage from "../assets/Walletimages/Card.png";
 
 const Wallet = () => {
   const data = useContext(AppContext);
+<<<<<<< HEAD
   const { Cards, Quicklogin, isquicklogin,setisquicklogin } = data;
+=======
+  const { Cards, Quicklogin, isquicklogin ,setisquicklogin} = data;
+>>>>>>> 102436ff0cd6e3d9bfaa716b830968a76b8ffb87
 
   console.log(Cards());
 const googlelogin = async (e) => {
     try {
-window.location.href = 'https://5a5c096fc0a2.ngrok-free.app/api/sunduk-service/custom-login';
+window.location.href = 'https://25eaaf0e887f.ngrok-free.app/api/sunduk-service/custom-login ';
     } catch (error) {
       // console.error('Error during login:', error);
 }
@@ -67,4 +71,4 @@ window.location.href = 'https://5a5c096fc0a2.ngrok-free.app/api/sunduk-service/c
   );
 };
 
-export default Wallet;
+export default Wallet;

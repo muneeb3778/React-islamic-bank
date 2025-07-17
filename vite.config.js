@@ -6,6 +6,9 @@ export default defineConfig({
   plugins: [react(),
       tailwindcss(),
   ],
+  server:{
+    port:5173
+  },
   base:"/React-islamic-bank/"
 })
 

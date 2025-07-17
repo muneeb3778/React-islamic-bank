@@ -18,7 +18,7 @@ const Fingerprint = () => {
           <img src={AeroLeft} alt="" />
         </div>
         <div className="w-[220px] h-[256px] absolute top-[118px] left-[50px] flex flex-col items-center justify-between">
-          <div className="w-[164px] h-[164px] rounded-[50%] bg-[#FFFFFF] blur-[2px] shadow shadow-[#D4A852] flex justify-center items-center"></div>
+          <div className="w-[164px] h-[164px] rounded-[50%] bg-[#FFFFFF] blur-[2px]  shadow-[0_0_25px_1px_#D4A852] flex justify-center items-center"></div>
           <div className="w-[89px] h-[89px] text-[#CCCCCC] absolute top-[40px]">
             <img className="z-10" src={FingerprintImage} alt="" />
           </div>
