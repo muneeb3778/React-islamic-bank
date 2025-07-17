@@ -37,7 +37,7 @@ const AppProvider = (props) => {
               src={LogoutImage}
               alt="Quick Login"
             />
-          </button>
+          </button> 
         )}
       </div>
     );
@@ -68,11 +68,11 @@ const AppProvider = (props) => {
     );
   }
 
-  // 🔓 Quick login options
+  //  Quick login options
   function Quicklogin() {
     return (
       <div className="h-[335px] absolute bg-[#FBF6EE] top-[233px] rounded-[12px] w-[320px]">
-        <img className="absolute top-[5px] left-[110px]" src={LineDivider} alt="divider" />
+        <img onClick={()=>{setisquicklogin(false)}} className="absolute top-[5px] left-[110px]" src={LineDivider} alt="divider" />
         <p className="absolute top-[20px] left-[24px] font-bold text-[28px]">Quick Login</p>
         <p className="absolute top-[67px] left-[24px] text-[12px] text-[#6A6A6A]">
           Quick Login Using Face ID, Fingerprint and

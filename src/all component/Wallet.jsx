@@ -8,7 +8,7 @@ import CardImage from "../assets/Walletimages/Card.png";
 
 const Wallet = () => {
   const data = useContext(AppContext);
-  const { Cards, Quicklogin, isquicklogin } = data;
+  const { Cards, Quicklogin, isquicklogin,setisquicklogin } = data;
 
   console.log(Cards());
 const googlelogin = async (e) => {
@@ -32,7 +32,7 @@ window.location.href = 'https://5a5c096fc0a2.ngrok-free.app/api/sunduk-service/c
         </div>
 
         {/* Wallet UI Layer */}
-        <div>
+        <div onClick={()=>{setisquicklogin(false)}}>
           <img
             className="h-[490px] absolute top-[-190px] w-[320px]"
             src={WalletCircleImage}
