@@ -18,7 +18,9 @@ const Home = () => {
         <div className="absolute top-2 left-[-191px]">
           <img src={BackgroundGraphic} alt="Background Graphic" />
         </div>
-
+ <Link to={'/landingpage'}>
+        <button>Home</button>
+        </Link>
         <Link to={"/wallet"}>
           <div className="w-[160px] h-[86.75px] absolute top-[127.12px] left-[80px]">
             <img src={SundukPay} alt="SundukPay Logo" />
@@ -27,6 +29,7 @@ const Home = () => {
             <img src={HomeCard} alt="Home Card" />
           </div>
         </Link>
+       
       </div>
     </div>
   );
