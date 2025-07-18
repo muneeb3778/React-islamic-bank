@@ -23,7 +23,7 @@ const Pincode = () => {
         {/* Back Arrow */}
         <div className="absolute top-[20px] left-[20px] z-20">
           <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center">
-            <ArrowLeft size={20} onClick={()=>{Navigate('/wallet')}} className="text-gray-700" />
+            <ArrowLeft size={20} onClick={()=>{Navigate(-1)}} className="text-gray-700" />
           </button>
         </div>
 

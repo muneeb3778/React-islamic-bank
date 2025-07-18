@@ -12,6 +12,7 @@ import Facelogin3 from "./all component/Facelogin3"
 import Pincode from "./all component/Pincode/Pincode"
 import Userprofile from "./all component/Userprofile"
 import Landingpage from "./all component/Landingpage"
+import Notfound from "./all component/Notfound"
 
 function App() {
 
@@ -32,11 +33,11 @@ function App() {
     <Route path="/pincode" element={<Pincode/>}/>
     <Route path="/Userprofile" element={<Userprofile/>}/>
     <Route path="/landingpage" element={<Landingpage/>}/>
-
+    <Route path='*' element={<Notfound/>}/>
     </Routes>
     </BrowserRouter>
     </>
   )
-}
+} 
 
 export default App

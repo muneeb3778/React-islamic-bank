@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { AppContext } from './Contextapi'
 
 // Importing assets
@@ -8,17 +7,19 @@ import AeroLeft from '../assets/facelogin/aeroleft.png'
 import AeroRight from '../assets/facelogin/aeroright.png'
 import CurveLine from '../assets/Fingerprint/curvline.png'
 import Smiley from '../assets/facelogin/smily.png'
+import { ArrowLeft } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Facelogin2 = () => {
-  const navigate = useNavigate()
+  const Navigate = useNavigate()
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/Facelogin3')
+      Navigate('/Facelogin3')
     }, 2000)
 
     return () => clearTimeout(timer) // Cleanup
-  }, [navigate])
+  }, [Navigate])
 
   return (
     <div className="bg-black h-[100vh] w-[100vw] flex justify-center items-center">
@@ -27,8 +28,10 @@ const Facelogin2 = () => {
           <img src={BackgroundGraphic} alt="Background Graphic" />
         </div>
 
-        <div className="w-[10px] h-[10px] absolute top-[23.93px] left-[24px]">
-          <img src={AeroLeft} alt="Back Arrow" />
+        <div className="absolute top-[20px] left-[20px] z-20">
+          <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center">
+            <ArrowLeft size={20} className="text-gray-700" />
+          </button>
         </div>
 
         <div className="w-[220px] h-[256px] absolute top-[118px] left-[50px] flex flex-col items-center justify-between">

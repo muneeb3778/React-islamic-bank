@@ -13,7 +13,7 @@ const Userprofile = () => {
   const navigate = useNavigate();
   const [userdata, setUserData] = useState({});
 
-  // const handleLogin = async () => {
+ 
   useEffect(() => {
   fetch('https://8bf14634a4a6.ngrok-free.app/api/sunduk-service/custom-login', {
     method: 'GET',
@@ -36,11 +36,7 @@ const Userprofile = () => {
     });
 }, []);
 
-  // };
 
-  // useEffect(() => {
-  //   handleLogin();
-  // }, []);
 
   const indexing = userdata.fullName ? userdata.fullName[0].toUpperCase() : '';
 

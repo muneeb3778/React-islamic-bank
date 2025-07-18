@@ -8,28 +8,31 @@ import AeroLeft from "../assets/facelogin/aeroleft.png";
 import AeroRight from "../assets/facelogin/aeroright.png";
 import CurveLine from "../assets/Fingerprint/curvline.png";
 import FingerprintProgress from "../assets/Fingerprint/Group 127.png";
+import { ArrowLeft } from 'lucide-react'
 
 const Finger2 = () => {
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
 
   // Use useEffect for side effects like navigation
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/fingerprint3");
+      Navigate("/fingerprint3");
     }, 2000);
 
     // Cleanup to avoid memory leaks
     return () => clearTimeout(timer);
-  }, [navigate]);
+  }, [Navigate]);
 
-  return (
+  return (  
     <div className="bg-black h-[100vh] w-[100vw] flex justify-center items-center">
       <div className="bg-white w-[320px] h-[568px] relative overflow-hidden">
         <div className="absolute top-2 left-[-191px]">
           <img src={BackgroundGraphic} alt="Background Graphic" />
         </div>
-        <div className="w-[10px] h-[10px] absolute top-[23.93px] left-[24px]">
-          <img src={AeroLeft} alt="Left Arrow" />
+        <div className="absolute top-[20px] left-[20px] z-20">
+          <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center">
+            <ArrowLeft size={20} className="text-gray-700" />
+          </button>
         </div>
 
         <div className="w-[220px] h-[256px] absolute top-[118px] left-[50px] flex flex-col items-center justify-between">

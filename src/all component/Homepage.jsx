@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "./Contextapi";
 
 // Import images from the assets folder
@@ -8,9 +8,14 @@ import SundukPay from "../assets/Homeimages/sundukpay.png";
 import HomeCard from "../assets/Homeimages/Homecard.png";
 
 const Home = () => {
-  // const data = useContext(AppContext)
-  // const { Card } = data
-  // console.log(Card())
+
+
+const Navigate = useNavigate();
+
+setTimeout(() => {
+  Navigate("/wallet")
+}, 2000);
+
 
   return (
     <div className="bg-black h-[100vh] w-[100vw] flex justify-center items-center">
@@ -18,9 +23,6 @@ const Home = () => {
         <div className="absolute top-2 left-[-191px]">
           <img src={BackgroundGraphic} alt="Background Graphic" />
         </div>
- <Link to={'/landingpage'}>
-        <button>Home</button>
-        </Link>
         <Link to={"/wallet"}>
           <div className="w-[160px] h-[86.75px] absolute top-[127.12px] left-[80px]">
             <img src={SundukPay} alt="SundukPay Logo" />
