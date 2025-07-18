@@ -33,7 +33,6 @@ function App() {
     <Route path="/Userprofile" element={<Userprofile/>}/>
     <Route path="/landingpage" element={<Landingpage/>}/>
 
-
     </Routes>
     </BrowserRouter>
     </>

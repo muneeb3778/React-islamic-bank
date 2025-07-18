@@ -1,27 +1,33 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "./Contextapi";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // Import images
 import BackgroundGraphic from "../assets/Walletimages/BackgroungGraphic.png";
 import WalletCircleImage from "../assets/Walletimages/walletcircleiamge.png";
 import CardImage from "../assets/Walletimages/Card.png";
+import axios from "axios";
+
 
 const Wallet = () => {
   const data = useContext(AppContext);
-<<<<<<< HEAD
   const { Cards, Quicklogin, isquicklogin,setisquicklogin } = data;
-=======
-  const { Cards, Quicklogin, isquicklogin ,setisquicklogin} = data;
->>>>>>> 102436ff0cd6e3d9bfaa716b830968a76b8ffb87
+
+const navigate=useNavigate()
+const location=useLocation()
 
   console.log(Cards());
-const googlelogin = async (e) => {
+
+
+const googlelogin = async () => {
     try {
-window.location.href = 'https://25eaaf0e887f.ngrok-free.app/api/sunduk-service/custom-login ';
+  window.location.href = 'https://8bf14634a4a6.ngrok-free.app/api/sunduk-service/custom-login'
     } catch (error) {
-      // console.error('Error during login:', error);
+      console.error('Error during login:', error);
 }
-};
+}
+
+
   return (
     <div className="bg-black flex justify-center w-[100vw] h-[100vh] items-center">
       <div className="h-[568px] bg-white w-[320px] relative overflow-hidden">
@@ -71,4 +77,5 @@ window.location.href = 'https://25eaaf0e887f.ngrok-free.app/api/sunduk-service/c
   );
 };
 
-export default Wallet;
+export default Wallet;
+

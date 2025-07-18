@@ -13,14 +13,34 @@ const Userprofile = () => {
   const navigate = useNavigate();
   const [userdata, setUserData] = useState({});
 
+  // const handleLogin = async () => {
   useEffect(() => {
-    axios.get("http://localhost:3000/users")
-      .then((res) => {
-        console.log(res.data);
-        setUserData(res.data);
-      })
-      .catch((err) => console.error("Error fetching user data:", err));
-  }, []);
+  fetch('https://8bf14634a4a6.ngrok-free.app/api/sunduk-service/custom-login', {
+    method: 'GET',
+    credentials: 'include',
+  })
+    .then((res) => {
+      console.log(res.data);
+      
+      if (!res.ok) throw new Error('Not logged in');
+      return res.json();
+    })
+    .then((data) => {
+      console.log('User Data:', data);
+      setUserData(data)
+      // Set user state or navigate
+    })
+    .catch((err) => {
+      console.log('Not logged in');
+
+    });
+}, []);
+
+  // };
+
+  // useEffect(() => {
+  //   handleLogin();
+  // }, []);
 
   const indexing = userdata.fullName ? userdata.fullName[0].toUpperCase() : '';
 
@@ -72,8 +92,4 @@ const Userprofile = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Userprofile 
-=======
 export default Userprofile;
->>>>>>> 102436ff0cd6e3d9bfaa716b830968a76b8ffb87
