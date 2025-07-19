@@ -1,15 +1,19 @@
 import React, { useContext } from 'react'
 import { AppContext } from './Contextapi'
 import { MoveRight } from 'lucide-react'
+import { useNavigate } from "react-router-dom";
 
 // Import images
 import BackgroundGraphic from '../assets/Walletimages/BackgroungGraphic.png'
 import FingerprintIcon from '../assets/Loginimages/fingerprint.png'
 import UAEFlag from '../assets/Loginimages/flag.png'
+import { ArrowLeft } from 'lucide-react'
 
 const LoginSundukpay = () => {
   const data = useContext(AppContext)
   const { Login, islogin, setislogin } = data
+
+const Navigate = useNavigate();
 
   return (
     <div className="bg-black min-h-screen flex items-center justify-center p-4 relative">
@@ -22,10 +26,17 @@ const LoginSundukpay = () => {
           className="absolute left-[-191px] h-[380px] w-[379px] object-cover"
         />
 
+        {/* left arrow */}
+        <div className="absolute top-[20px] left-[20px] z-20">
+          <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center">
+            <ArrowLeft size={20} onClick={()=>{Navigate(-1)}} className="text-gray-700" />
+          </button>
+        </div>
+
         {/* Content */}
         <div className="relative z-10 p-6 h-full flex flex-col">
           {/* Header */}
-          <div className="mb-6 mt-4">
+          <div className="mb-6 mt-12">
             <h1
               onClick={() => setislogin(false)}
               className="text-[28px] cursor-pointer font-bold text-gray-900 leading-tight mb-2"
