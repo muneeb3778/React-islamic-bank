@@ -29,7 +29,7 @@ const googlelogin = async () => {
 
 
   return (
-    <div className="bg-black flex justify-center w-[100vw] h-[100vh] items-center">
+    // <div className="bg-black flex justify-center w-[100vw] h-[100vh] items-center">
       <div className="h-[568px] bg-white w-[320px] sm:w-[400px] sm:h-[600px] relative overflow-hidden">
 
         {/* Background Graphics */}
@@ -76,7 +76,7 @@ const googlelogin = async () => {
         {/* Render Cards */}
         {Cards()}
       </div>
-    </div>
+    // </div>
   );
 };
 
