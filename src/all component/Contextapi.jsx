@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MdNavigateNext } from "react-icons/md";
 import { MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import { MdHistory } from "react-icons/md";
 // Image imports
 import BackgroundGraphic from "../assets/Walletimages/BackgroungGraphic.png";
 import LogoutImage from "../assets/Walletimages/Logoutimage.png";
@@ -12,19 +12,26 @@ import PasscodeIcon from "../assets/Walletimages/Group 78.png";
 import UAEPassLogo from "../assets/Loginimages/Group 40.png";
 import LineDivider from "../assets/Loginimages/blackline.jpg";
 
+
+import { AiOutlineUser } from "react-icons/ai";
+import { PiQrCodeLight } from "react-icons/pi";
+import { GoHomeFill } from "react-icons/go";
 const AppContext = React.createContext();
 
 const AppProvider = (props) => {
   const [islogin, setislogin] = useState(false);
   const [isquicklogin, setisquicklogin] = useState(false);
+  const [changefooterclr, setchangefooterclr] = useState(1);
 
-  // 💳 Login button & quick login trigger
+
+
+  //  Login button & quick login trigger
   function Cards() {
     return (
       <div>
         <Link to={"/login"}>
           {!isquicklogin && (
-            <button className="h-[38px] bg-gradient-to-r from-[#c7962b] to-[#b6801c] text-white font-bold text-[12px] rounded-[8px] absolute top-[456px] left-[24px] w-[272px]">
+            <button className="h-[7%] bg-gradient-to-r from-[#c7962b] to-[#b6801c] text-white font-bold text-[12px] rounded-[8px] absolute top-[80%] left-[8%] w-[85%]">
               Log in
             </button>
           )}
@@ -33,11 +40,11 @@ const AppProvider = (props) => {
         {!isquicklogin && (
           <button onClick={() => setisquicklogin(true)}>
             <img
-              className="h-[38px] absolute top-[506px] left-[24px] w-[272px]"
+              className="h-[7%] absolute top-[89%] left-[8%] w-[85%]"
               src={LogoutImage}
               alt="Quick Login"
             />
-          </button> 
+          </button>
         )}
       </div>
     );
@@ -72,7 +79,7 @@ const AppProvider = (props) => {
   function Quicklogin() {
     return (
       <div className="h-[335px] absolute bg-[#FBF6EE] top-[233px] rounded-[12px] w-[320px]">
-        <img onClick={()=>{setisquicklogin(false)}} className="absolute top-[5px] left-[110px]" src={LineDivider} alt="divider" />
+        <img onClick={() => { setisquicklogin(false) }} className="absolute top-[5px] left-[110px]" src={LineDivider} alt="divider" />
         <p className="absolute top-[20px] left-[24px] font-bold text-[28px]">Quick Login</p>
         <p className="absolute top-[67px] left-[24px] text-[12px] text-[#6A6A6A]">
           Quick Login Using Face ID, Fingerprint and
@@ -105,18 +112,21 @@ const AppProvider = (props) => {
 
         {/* Passcode */}
         <Link to={"/Pincode"}>
-        <div className="absolute bg-white top-[260px] h-[53px] w-[272px] left-[24px]">
-          <img className="absolute top-[16px] left-[10px] w-[18px] h-[20px]" src={PasscodeIcon} alt="Passcode" />
-          <p className="absolute top-[7px] left-[39px] text-[12px]">Passcode</p>
-          <p className="absolute top-[30px] left-[39px] text-[9px] text-[#6A6A6A]">Quick Login using Passcode</p>
-          <span className="absolute top-[25px] left-[250px]">
-            <MdNavigateNext />
-          </span>
-        </div>
-      </Link>
+          <div className="absolute bg-white top-[260px] h-[53px] w-[272px] left-[24px]">
+            <img className="absolute top-[16px] left-[10px] w-[18px] h-[20px]" src={PasscodeIcon} alt="Passcode" />
+            <p className="absolute top-[7px] left-[39px] text-[12px]">Passcode</p>
+            <p className="absolute top-[30px] left-[39px] text-[9px] text-[#6A6A6A]">Quick Login using Passcode</p>
+            <span className="absolute top-[25px] left-[250px]">
+              <MdNavigateNext />
+            </span>
+          </div>
+        </Link>
 
       </div>
+
+
     );
+
   }
 
   return (
@@ -129,6 +139,8 @@ const AppProvider = (props) => {
         isquicklogin,
         setisquicklogin,
         Quicklogin,
+        setchangefooterclr,
+        changefooterclr
       }}
     >
       {props.children}

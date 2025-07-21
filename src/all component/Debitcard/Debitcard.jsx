@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 // Import all required images
 import { ArrowLeft } from 'lucide-react'
 import paymentsuccessfull from '../../assets/Debitcard/paymentsuccessfull.png'
+import { AppContext } from "../Contextapi";
+
 
 const Debitcard = () => {
+  const data = useContext(AppContext);
+  const { Cards, Quicklogin, isquicklogin,setisquicklogin } = data;
 
 const Navigate=useNavigate()  
 
   return (
     <div className="bg-black h-[100vh] w-[100vw] flex justify-center items-center">
-      <div className="bg-white w-[320px] h-[568px] relative overflow-hidden">
+      <div className="bg-white w-[320px] h-[568px] lg:w-[412px] lg:h-[915px] relative overflow-hidden">
         <div className="absolute top-[20px] left-[20px] z-20 flex items-center gap-8 font-bold">
           <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center">
             <ArrowLeft size={20} className="text-gray-700" />
@@ -33,3 +37,4 @@ const Navigate=useNavigate()
 };
 
 export default Debitcard;
+// 412 x 915 pixels
